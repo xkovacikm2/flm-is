@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="FLM" id="36f66ed2-4e9b-42cb-b7c6-cf3531345e4c" version="4.0.1">
+  <folder name="Strategy" id="0fc2b670-d586-47bf-815b-17e0cd3438ae" type="strategy"/>
+  <folder name="Business" id="68a395b7-a304-4df8-9ae5-d2e393c54d2c" type="business"/>
+  <folder name="Application" id="74cd167a-2d34-4559-aecf-b0286af0e949" type="application"/>
+  <folder name="Technology &amp; Physical" id="933a8957-6202-4b9b-871d-ca7cc1bef267" type="technology"/>
+  <folder name="Motivation" id="9a23dceb-e424-4982-a027-31daab3a27b7" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="7bf70333-0752-4a29-882c-dea0bfc74323" type="implementation_migration"/>
+  <folder name="Other" id="e30d58a5-5ab8-424b-97ff-530c2a1f4af5" type="other"/>
+  <folder name="Relations" id="d7f14e46-63ac-4cf9-92e5-b26cbccf535b" type="relations"/>
+  <folder name="Views" id="500beb0f-a578-4154-9fe1-4454a005f546" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="63579c6e-4b67-4e09-90e1-773d358c3cad"/>
+  </folder>
+  <purpose>Informacny system Frontu Lavicovej Mladeze.</purpose>
+</archimate:model>

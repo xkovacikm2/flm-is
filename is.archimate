@@ -1,15 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="FLM" id="36f66ed2-4e9b-42cb-b7c6-cf3531345e4c" version="4.0.1">
-  <folder name="Strategy" id="0fc2b670-d586-47bf-815b-17e0cd3438ae" type="strategy"/>
-  <folder name="Business" id="68a395b7-a304-4df8-9ae5-d2e393c54d2c" type="business"/>
+  <folder name="Strategy" id="0fc2b670-d586-47bf-815b-17e0cd3438ae" type="strategy">
+    <element xsi:type="archimate:Resource" name="Osobne udaje ziadatela" id="c3854d2b-47b6-4c16-a994-2ce5bcf073db">
+      <documentation>vyplneny formular prihlasky</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Ziadost o clenstvo" id="c4f0015e-564e-4b7e-afc6-184c7aec2e7d"/>
+  </folder>
+  <folder name="Business" id="68a395b7-a304-4df8-9ae5-d2e393c54d2c" type="business">
+    <documentation>Current business flows</documentation>
+    <element xsi:type="archimate:BusinessEvent" name="Schvalovanie clenstva na programe UV" id="13160d1c-78fc-4266-a95e-b5e6b641a740">
+      <documentation>UV/KLUB(TBA) FLM rozhodne o schvaleni, alebo zamietnuti ziadosti o clenstvo vo FLM. </documentation>
+    </element>
+    <element xsi:type="archimate:BusinessActor" name="Ziadatel o clenstvo" id="ad32323f-2614-4118-a5cc-d5cea40e84d4">
+      <documentation>Tretia osoba, ktora splna podmienky ziadania o clenstvo.
+1.Členom FLM sa môže stať každý občan SR vo veku od 14 do 35 rokov, ktorý súhlasí s cieľmi a Stanovami FLM a spĺňa podmienky členstva podľa hlavy III, čl. 2 a 3. Po dovŕšení veku 35 rokov môže byť členovi FLM udelené čestné členstvo FLM.
+2.S členstvom vo FLM je nezlučiteľná podpora a propagácia hnutí smerujúcich k potláčaniu práv a slobôd občanov, alebo iná činnosť, ktorá je v rozpore s Listinou základných práv a slobôd občanov.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Vyplnenie prihlasky za clena FLM" id="6dc01bc4-2c0d-42bc-9e04-2ddf5524cea3">
+      <documentation>ziadatel vyplni formular</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Ustredny vybor" id="6fcf9c86-a9d8-4df1-9d4c-ceb798bc74f1">
+      <documentation>Ústredný výbor FLM (ďalej len ÚV) je v období medzi zjazdmi najvyšším zastupiteľským orgánom FLM, ktorý je zvolávaný predsedom FLM. 
+Mimoriadny ÚV sa môže zvolať na žiadosť najmenej jednej tretiny všetkých členov ÚV. 
+ÚV plní a rozpracúva závery a uznesenia zjazdu, schvaľuje finančný rozpočet na obdobie jedného kalendárneho roka, určuje hlavné úlohy, koncepčné a obsahové zameranie činnosti FLM , kontroluje plnenie uznesení nižších orgánov, finančne a organizačne im pomáha realizovať schválené rozhodnutia, prijíma členské príspevky, určuje výšku a spôsob ich platenia, zastupuje FLM na verejnosti a v zahraničí. 
+Reaguje na aktuálne problémy doma i vo svete, vydáva k nim stanoviská a hľadá ich riešenia v súlade so svojimi programovými cieľmi. 
+Zodpovedá za propagáciu FLM, ako aj za úroveň teoretickej prípravy členov FLM podľa ich zastávajúcej funkcie. 
+Má právomoc odvolať volených funkcionárov FLM na úrovni ÚV a predsedníctva a zvoliť nových. Schvaľuje alebo z dôvodu porušovania dokumentov FLM ruší registráciu klubov. 
+Môže schváliť zmenu právomocí jednotlivých členov ÚV. 
+Zvoláva sa spravidla 2 krát za rok. 
+ÚV potvrdzuje do funkcie predsedu Ústrednej revíznej a rozhodcovskej komisie.</documentation>
+    </element>
+    <element xsi:type="archimate:Product" name="Prihlaska za clena FLM" id="9058db26-5733-4087-9aad-c02524792b9b"/>
+    <element xsi:type="archimate:Product" name="Vysledok rozhodnutia" id="227f8d79-ff59-444c-8028-e0f21d19df41">
+      <documentation>Ziadatel moze a nemusi byt prijaty za clena</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Otvorenie " id="f3ebfd14-e2cb-444b-9c38-6d2722a506da"/>
+    <element xsi:type="archimate:BusinessProcess" name="Podanie ziadosti o clenstvo vo FLM" id="715dd186-8647-41bd-aa14-82785afbaa07">
+      <documentation>Ulozenie osobnych udajov ziadatela vo forme ziadosti</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Rozhodnutie o prijati" id="0e2076fa-33c9-431f-babb-ee8f0a15fe4a"/>
+  </folder>
   <folder name="Application" id="74cd167a-2d34-4559-aecf-b0286af0e949" type="application"/>
   <folder name="Technology &amp; Physical" id="933a8957-6202-4b9b-871d-ca7cc1bef267" type="technology"/>
   <folder name="Motivation" id="9a23dceb-e424-4982-a027-31daab3a27b7" type="motivation"/>
   <folder name="Implementation &amp; Migration" id="7bf70333-0752-4a29-882c-dea0bfc74323" type="implementation_migration"/>
   <folder name="Other" id="e30d58a5-5ab8-424b-97ff-530c2a1f4af5" type="other"/>
-  <folder name="Relations" id="d7f14e46-63ac-4cf9-92e5-b26cbccf535b" type="relations"/>
+  <folder name="Relations" id="d7f14e46-63ac-4cf9-92e5-b26cbccf535b" type="relations">
+    <element xsi:type="archimate:ServingRelationship" id="fee1244b-3fbc-4309-a564-ed6bd098a8d0" source="6fcf9c86-a9d8-4df1-9d4c-ceb798bc74f1" target="13160d1c-78fc-4266-a95e-b5e6b641a740"/>
+    <element xsi:type="archimate:ServingRelationship" id="ba3998fa-7bf4-4af1-9efb-5f955b7d2610" source="ad32323f-2614-4118-a5cc-d5cea40e84d4" target="6dc01bc4-2c0d-42bc-9e04-2ddf5524cea3"/>
+    <element xsi:type="archimate:ServingRelationship" id="c80149f1-392b-4a6f-a60c-7174e06c58af" source="715dd186-8647-41bd-aa14-82785afbaa07" target="6dc01bc4-2c0d-42bc-9e04-2ddf5524cea3"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="378989aa-e8d8-4df4-80fb-1c2986cb25c8" source="6dc01bc4-2c0d-42bc-9e04-2ddf5524cea3" target="715dd186-8647-41bd-aa14-82785afbaa07"/>
+    <element xsi:type="archimate:AssociationRelationship" name="&lt;&lt;input>>" id="96f7319d-8e87-473b-9d80-70a5c44f6af2" source="c3854d2b-47b6-4c16-a994-2ce5bcf073db" target="715dd186-8647-41bd-aa14-82785afbaa07"/>
+    <element xsi:type="archimate:FlowRelationship" id="5bab1dce-53d2-48fc-8326-92fa8eb386ec" source="715dd186-8647-41bd-aa14-82785afbaa07" target="9058db26-5733-4087-9aad-c02524792b9b"/>
+    <element xsi:type="archimate:AssociationRelationship" name="&lt;&lt;output>>" id="0dc5f218-2ddd-4cd8-9a6f-01cd0e41ac57" source="c4f0015e-564e-4b7e-afc6-184c7aec2e7d" target="715dd186-8647-41bd-aa14-82785afbaa07"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="c4f5c4b9-fbfd-4a2b-85df-85e528c04a1f" source="13160d1c-78fc-4266-a95e-b5e6b641a740" target="0e2076fa-33c9-431f-babb-ee8f0a15fe4a"/>
+    <element xsi:type="archimate:FlowRelationship" id="656c91c1-b942-4ab4-97a2-d022dcada445" source="0e2076fa-33c9-431f-babb-ee8f0a15fe4a" target="227f8d79-ff59-444c-8028-e0f21d19df41"/>
+    <element xsi:type="archimate:AssociationRelationship" name="&lt;&lt;input>>" id="919013a8-94c0-4070-9693-50c995a4f800" source="c4f0015e-564e-4b7e-afc6-184c7aec2e7d" target="0e2076fa-33c9-431f-babb-ee8f0a15fe4a"/>
+  </folder>
   <folder name="Views" id="500beb0f-a578-4154-9fe1-4454a005f546" type="diagrams">
-    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="63579c6e-4b67-4e09-90e1-773d358c3cad"/>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="63579c6e-4b67-4e09-90e1-773d358c3cad">
+      <child xsi:type="archimate:DiagramObject" id="507ccfd1-dead-4c57-aaa2-ff781ad15e6f" targetConnections="044ab08c-0a05-4bcb-98cc-81bbc665cb56" archimateElement="13160d1c-78fc-4266-a95e-b5e6b641a740" type="1">
+        <bounds x="456" y="425" width="133" height="59"/>
+        <sourceConnection xsi:type="archimate:Connection" id="41046608-df10-462b-9e1a-894247010da7" source="507ccfd1-dead-4c57-aaa2-ff781ad15e6f" target="6522f1de-72c0-4194-8139-7d4cc2a2a4b5" archimateRelationship="c4f5c4b9-fbfd-4a2b-85df-85e528c04a1f"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="91aa286c-79b6-4ea5-a46d-dffb2492732e" archimateElement="ad32323f-2614-4118-a5cc-d5cea40e84d4">
+        <bounds x="228" y="192" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="302ca028-1498-46a0-bf63-36c6e58f7842" source="91aa286c-79b6-4ea5-a46d-dffb2492732e" target="fc18fda9-caf6-425d-b8ba-c2bbbe5ee04f" archimateRelationship="ba3998fa-7bf4-4af1-9efb-5f955b7d2610"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="fc18fda9-caf6-425d-b8ba-c2bbbe5ee04f" targetConnections="302ca028-1498-46a0-bf63-36c6e58f7842" archimateElement="6dc01bc4-2c0d-42bc-9e04-2ddf5524cea3" type="1">
+        <bounds x="456" y="192" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="31297a64-d85c-4ee4-8278-e350851942ba" source="fc18fda9-caf6-425d-b8ba-c2bbbe5ee04f" target="971a3dcd-754c-4f81-a63e-97d0bb60afe0" archimateRelationship="378989aa-e8d8-4df4-80fb-1c2986cb25c8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="c1071d89-9ed6-4329-b64b-248823ea0557" archimateElement="6fcf9c86-a9d8-4df1-9d4c-ceb798bc74f1">
+        <bounds x="228" y="429" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="044ab08c-0a05-4bcb-98cc-81bbc665cb56" source="c1071d89-9ed6-4329-b64b-248823ea0557" target="507ccfd1-dead-4c57-aaa2-ff781ad15e6f" archimateRelationship="fee1244b-3fbc-4309-a564-ed6bd098a8d0"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="6d99011c-fea6-4350-9470-9b49bdd9ae1c" archimateElement="c3854d2b-47b6-4c16-a994-2ce5bcf073db">
+        <bounds x="659" y="84" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="47bd6920-5059-484e-8058-b2e1f2291fcf" source="6d99011c-fea6-4350-9470-9b49bdd9ae1c" target="971a3dcd-754c-4f81-a63e-97d0bb60afe0" archimateRelationship="96f7319d-8e87-473b-9d80-70a5c44f6af2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="ce1044f2-1f99-4899-9a33-63116d35c2e2" archimateElement="c4f0015e-564e-4b7e-afc6-184c7aec2e7d">
+        <bounds x="659" y="312" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="5803bd8c-92ab-4e0d-873c-7589657c377f" source="ce1044f2-1f99-4899-9a33-63116d35c2e2" target="971a3dcd-754c-4f81-a63e-97d0bb60afe0" archimateRelationship="0dc5f218-2ddd-4cd8-9a6f-01cd0e41ac57"/>
+        <sourceConnection xsi:type="archimate:Connection" id="8aae9820-a81a-4cd4-ac14-778fd36579d2" source="ce1044f2-1f99-4899-9a33-63116d35c2e2" target="6522f1de-72c0-4194-8139-7d4cc2a2a4b5" archimateRelationship="919013a8-94c0-4070-9693-50c995a4f800"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="75c33a31-fd03-41cb-a625-7f93b98fdf90" targetConnections="f6b1c331-9f43-4b3a-82ff-50da3223bad7" archimateElement="9058db26-5733-4087-9aad-c02524792b9b">
+        <bounds x="876" y="192" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="01e83677-2f20-420d-b89d-c5b361d6667f" targetConnections="0ab2ce34-6cd2-4b26-8b41-4f22c9293eec" archimateElement="227f8d79-ff59-444c-8028-e0f21d19df41">
+        <bounds x="876" y="429" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="c99a05e7-ac79-423e-9aa7-0797657d5724" archimateElement="f3ebfd14-e2cb-444b-9c38-6d2722a506da" type="1">
+        <bounds x="456" y="528" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="971a3dcd-754c-4f81-a63e-97d0bb60afe0" targetConnections="31297a64-d85c-4ee4-8278-e350851942ba 47bd6920-5059-484e-8058-b2e1f2291fcf 5803bd8c-92ab-4e0d-873c-7589657c377f" archimateElement="715dd186-8647-41bd-aa14-82785afbaa07" type="1">
+        <bounds x="659" y="192" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="f6b1c331-9f43-4b3a-82ff-50da3223bad7" source="971a3dcd-754c-4f81-a63e-97d0bb60afe0" target="75c33a31-fd03-41cb-a625-7f93b98fdf90" archimateRelationship="5bab1dce-53d2-48fc-8326-92fa8eb386ec"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="6522f1de-72c0-4194-8139-7d4cc2a2a4b5" targetConnections="41046608-df10-462b-9e1a-894247010da7 8aae9820-a81a-4cd4-ac14-778fd36579d2" archimateElement="0e2076fa-33c9-431f-babb-ee8f0a15fe4a" type="1">
+        <bounds x="659" y="427" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="0ab2ce34-6cd2-4b26-8b41-4f22c9293eec" source="6522f1de-72c0-4194-8139-7d4cc2a2a4b5" target="01e83677-2f20-420d-b89d-c5b361d6667f" archimateRelationship="656c91c1-b942-4ab4-97a2-d022dcada445"/>
+      </child>
+    </element>
   </folder>
   <purpose>Informacny system Frontu Lavicovej Mladeze.</purpose>
 </archimate:model>
